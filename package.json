@@ -24,6 +24,7 @@
     "@jest/globals": "^29.7.0",
     "@types/bcrypt": "^5.0.0",
     "@types/connect-timeout": "^0.0.37",
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.17",
     "@types/imap": "^0.8.37",
     "@types/jest": "^29.5.3",
@@ -45,7 +46,6 @@
   "dependencies": {
     "@aws-sdk/client-cloudwatch-logs": "^3.427.0",
     "@serdnam/pino-cloudwatch-transport": "^1.0.4",
-    "@types/cors": "^2.8.17",
     "axios": "^1.4.0",
     "bcrypt": "^5.1.1",
     "cheerio": "^1.0.0-rc.12",

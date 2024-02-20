@@ -23,7 +23,7 @@ In general, each module contains a router.ts file with the routes that use contr
 Each module also contains a swagger.ts file that registers routes and components for the swagger doc that adheres to OpenAPI 3.0.0. The root swagger doc is built in `/src/docs/swagger.ts`
 
 ### Util Modules
-Util modules mostly follow the same structure as prenota modules. There are seperate modules for axios, puppeteer (browser), redise (cache), and email (mail).
+Util modules mostly follow the same structure as prenota modules. There are seperate modules for axios, puppeteer (browser), redis (cache), and email (mail).
 
 The middleware defined in the util modules is used in utils routes, as well as throughout the project. For example, middleware defined in `/src/utils/browser/middleware.ts`, are heavily used throughout the project on routes that send requests to the remote server using puppeteer. Generally, these routes bypass recaptcha v3.
 
