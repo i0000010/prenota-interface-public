@@ -28,4 +28,4 @@ Util modules mostly follow the same structure as prenota modules. There are sepe
 The middleware defined in the util modules is used in utils routes, as well as throughout the project. For example, middleware defined in `/src/utils/browser/middleware.ts`, are heavily used throughout the project on routes that send requests to the remote server using puppeteer. Generally, these routes bypass recaptcha v3.
 
 ## Setup
-Email account.proton.me.upgrade279@passmail.net for setup instructions.
+Email mmaceachen@proton.me for setup instructions.
