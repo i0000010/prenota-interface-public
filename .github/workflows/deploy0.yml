@@ -1,0 +1,27 @@
+name: deploy
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: deploy to server 0
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.PRENOTA_AGENT_0_HOST }}
+          username: ubuntu
+          key: ${{ secrets.PRENOTA_AGENT_0_SSH_KEY }}
+          port: 22
+          script: |
+            cd prenota-interface
+            git stash
+            git pull -q
+            pnpm install
+            pnpm run build
+            pm2 stop all
+            pm2 delete all
+            pm2 start --name interface pnpm -- start
